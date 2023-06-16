@@ -1,8 +1,12 @@
+import Counter from "./components/Counter/Counter";
 import ToDo from "./components/ToDo/ToDo";
 
 function App() {
   return (
-    <ToDo />
+    <div>
+      <ToDo />
+      <Counter />
+    </div>
   );
 }
 
