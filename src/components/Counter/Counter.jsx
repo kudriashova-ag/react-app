@@ -9,7 +9,13 @@ const Counter = () => {
   }
 
   const increment = () => {
-    setCount(count + 1);
+    /*setCount(count + 1);  // 0 + 1
+    setCount(count + 1);  // 0 + 1
+    setCount(count + 1);  // 0 + 1*/
+    setCount((count) => count + 1);
+    setCount((count) => count + 1);
+    setCount((count) => count + 1);
+    
   };
 
 
