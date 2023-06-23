@@ -1,0 +1,31 @@
+header{
+  padding: 20px 0;
+  text-align: center;
+}
+
+header a{
+  display: inline-block;
+  padding: 10px 20px;
+  
+  text-decoration: none;
+}
+
+header a.active{
+  color: #f90
+}
+
+header.dark{
+  background: #333;
+  color: #ddd;
+}
+header.dark a{
+  color: #ddd;
+}
+
+
+header.light{
+  background: #ddd;
+}
+header.light a{
+  color: #333;
+}
