@@ -5,8 +5,6 @@ import { useRef } from "react";
 const Forms = () => {
   const form = useRef(null);
 
-
-
   const submitHandler = (values) => {
     console.log(values);
     console.log(form);

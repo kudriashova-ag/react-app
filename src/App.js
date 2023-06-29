@@ -7,6 +7,7 @@ import UserInfo from "./components/Users/UserInfo";
 import UsersContext from "./contexts/UsersContext";
 import { useEffect, useState } from "react";
 import ThemeProvider from "./providers/ThemeProvider";
+import Counters from "./components/Counters/Counters";
 
 function App() {
 
@@ -32,6 +33,9 @@ function App() {
             <Route path="/users" element={<Users />}>
               <Route path=":id" element={<UserInfo />} />
             </Route>
+
+            <Route path="/counters" element={<Counters />} />
+
             <Route path="*" element={<h1>Page Not Found</h1>} />
           </Routes>
         </ThemeProvider>
