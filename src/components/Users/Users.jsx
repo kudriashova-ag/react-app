@@ -8,12 +8,13 @@ const Users = () => {
 
   const [search, setSearch] = useSearchParams(); 
   const [textSearch, setTextSearch] = useState(search.get('q') ?? '');
-
+  const [textSearch2, setTextSearch2] = useState(search.get("q2") ?? "");
 
   const searchHandler = (e) => { 
     setTextSearch(e.target.value);
-    setSearch({ q: e.target.value });
-    search.set("b", 2);
+   // setSearch({ q: e.target.value });
+    search.set("b", e.target.value);
+    search.set("q", e.target.value);
     setSearch(search)
   }
 

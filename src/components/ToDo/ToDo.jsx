@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useMemo, useReducer, useState } from "react";
 import AddToDo from "./AddToDo";
 import FilterTodo from "./FilterTodo";
 import ToDoItem from "./ToDoItem";
@@ -67,15 +67,17 @@ const ToDo = () => {
       <div>
         <h3>{taskHeading}</h3>
         <ul>
-          {taskList.filter(filter_map[filter]).map((task) => (
-            <ToDoItem
-              task={task}
-              toggleTaskCompleted={toggleTaskCompleted}
-              deleteTask={deleteTask}
-              editTask={editTask}
-              key={task.id}
-            />
-          ))}
+          {taskList.filter(filter_map[filter]).map(
+            (task) => (
+              <ToDoItem
+                task={task}
+                toggleTaskCompleted={toggleTaskCompleted}
+                deleteTask={deleteTask}
+                editTask={editTask}
+                key={task.id}
+              />
+            )
+          )}
         </ul>
       </div>
     </>

@@ -4,3 +4,6 @@
 .complete{
   text-decoration: line-through;
 }
+.error{
+  color: red
+}

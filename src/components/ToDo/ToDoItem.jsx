@@ -44,6 +44,7 @@ const ToDoItem = ({ task, toggleTaskCompleted, deleteTask, editTask }) => {
       <div>
         <button onClick={() => setEditing(false)}>Cancel</button>
         <button onClick={handlerSubmit}>Save</button>
+        
       </div>
     </div>
   );
