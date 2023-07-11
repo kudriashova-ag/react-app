@@ -13,17 +13,21 @@ const ToDo = () => {
   const addTask = (name) => {
     dispatch({
       type: 'added',
-      name
+      payload: {name}
     });
   };
 
   const toggleTaskCompleted = (id) => {
-    const updatedTasks = taskList.map((task) => {
-      if (task.id === id) {
-        return { ...task, completed: !task.completed };
-      }
-      return task;
+    dispatch({
+      type: "changeCompleted",
+      payload: { id },
     });
+    // const updatedTasks = taskList.map((task) => {
+    //   if (task.id === id) {
+    //     return { ...task, completed: !task.completed };
+    //   }
+    //   return task;
+    // });
 
     //setTaskList(updatedTasks);
   };
