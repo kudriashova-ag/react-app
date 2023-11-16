@@ -8,6 +8,7 @@ import UsersContext from "./contexts/UsersContext";
 import { useEffect, useState } from "react";
 import ThemeProvider from "./providers/ThemeProvider";
 import Counters from "./components/Counters/Counters";
+import axios from "axios";
 
 function App() {
 
@@ -16,10 +17,15 @@ function App() {
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
     const result = await response.json();
     setUsers(result);
+
+
   }
   useEffect(() => {
     getUsers();
   }, []);
+
+
+
 
 
   return (
